@@ -14,19 +14,23 @@ public class Player : MonoBehaviour {
 	void Update () {
         movement = Vector3.zero;
 
-        if(Input.GetKey(KeyCode.W)) {
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
             movement.z += speed;
         }
 
-        if(Input.GetKey(KeyCode.S)) {
+
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
             movement.z -= speed;
         }
 
-        if(Input.GetKey(KeyCode.D)) {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
             movement.x += speed;
         }
 
-        if(Input.GetKey(KeyCode.A)) {
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
             movement.x -= speed;
         }
 
