@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Start Menu\Buttons.cs">
     <Files>
+      <File FileName="Temp\Compiled-Normal-Diffuse-.shader" Line="1" Column="1" />
       <File FileName="Assets\Start Menu\Buttons.cs" Line="6" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
