@@ -651,6 +651,7 @@ GameObject:
   - 23: {fileID: 1046374203}
   - 114: {fileID: 1046374202}
   - 54: {fileID: 1046374201}
+  - 114: {fileID: 1046374206}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -712,7 +713,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 8a5c920316abb9d4fa37c09a16652f48, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -742,6 +743,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1080434536}
   m_GameObject: {fileID: 1046374199}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1046374206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: b1ef34e6365267d45a7032e9142bf7d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1080434536}
+  m_GameObject: {fileID: 1046374199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2d9df07bb35fb46b487441ba49a5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1050720302
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,9 +991,11 @@ GameObject:
   - 114: {fileID: 1336501146}
   - 135: {fileID: 1336501145}
   - 54: {fileID: 1336501144}
+  - 114: {fileID: 1336501152}
+  - 114: {fileID: 1336501151}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,6 +1098,34 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1336501151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 1973da742d6c9bf41846cecee9ebb1c3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1412940404}
+  m_GameObject: {fileID: 1336501143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  resetAfterDeathTime: 1.5
+--- !u!114 &1336501152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 1973da742d6c9bf41846cecee9ebb1c3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1412940404}
+  m_GameObject: {fileID: 1336501143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  resetAfterDeathTime: 1.5
 --- !u!1 &1336789213
 GameObject:
   m_ObjectHideFlags: 0

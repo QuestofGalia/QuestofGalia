@@ -355,9 +355,10 @@ GameObject:
   - 114: {fileID: 247300489}
   - 135: {fileID: 247300494}
   - 54: {fileID: 247300495}
+  - 114: {fileID: 247300496}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,6 +455,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &247300496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 247300488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  resetAfterDeathTime: 1.5
 --- !u!1001 &286155273
 Prefab:
   m_ObjectHideFlags: 0
@@ -606,6 +620,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
       propertyPath: Player
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
@@ -1403,6 +1421,8 @@ GameObject:
   - 23: {fileID: 1330762404}
   - 114: {fileID: 1330762403}
   - 54: {fileID: 1330762402}
+  - 114: {fileID: 1330762408}
+  - 114: {fileID: 1330762407}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1494,6 +1514,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 56076296}
   m_GameObject: {fileID: 1330762400}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1330762407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330762400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4926ce574c43f5544a978e303c714de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  resetAfterDeathTime: 5
+--- !u!114 &1330762408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: b1ef34e6365267d45a7032e9142bf7d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 56076296}
+  m_GameObject: {fileID: 1330762400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2d9df07bb35fb46b487441ba49a5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1369809706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,9 +1938,12 @@ GameObject:
   - 114: {fileID: 1840689374}
   - 135: {fileID: 1840689373}
   - 54: {fileID: 1840689372}
+  - 114: {fileID: 1840689380}
+  - 114: {fileID: 1840689379}
+  - 114: {fileID: 1840689378}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1998,6 +2046,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 462915014}
   m_GameObject: {fileID: 1840689370}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1840689378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840689370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  resetAfterDeathTime: 1.5
+--- !u!114 &1840689379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 1973da742d6c9bf41846cecee9ebb1c3,
+    type: 2}
+  m_PrefabInternal: {fileID: 462915014}
+  m_GameObject: {fileID: 1840689370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  resetAfterDeathTime: 1.5
+--- !u!114 &1840689380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 1973da742d6c9bf41846cecee9ebb1c3,
+    type: 2}
+  m_PrefabInternal: {fileID: 462915014}
+  m_GameObject: {fileID: 1840689370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  resetAfterDeathTime: 1.5
 --- !u!1001 &1864448775
 Prefab:
   m_ObjectHideFlags: 0
