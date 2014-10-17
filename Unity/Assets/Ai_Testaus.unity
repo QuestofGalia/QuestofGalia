@@ -652,6 +652,7 @@ GameObject:
   - 114: {fileID: 1046374202}
   - 54: {fileID: 1046374201}
   - 114: {fileID: 1046374206}
+  - 114: {fileID: 1046374207}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -755,6 +756,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2d9df07bb35fb46b487441ba49a5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1046374207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: b1ef34e6365267d45a7032e9142bf7d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1080434536}
+  m_GameObject: {fileID: 1046374199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4926ce574c43f5544a978e303c714de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  resetAfterDeathTime: 5
 --- !u!1 &1050720302
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1007,6 @@ GameObject:
   - 135: {fileID: 1336501145}
   - 54: {fileID: 1336501144}
   - 114: {fileID: 1336501152}
-  - 114: {fileID: 1336501151}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Monster
@@ -1098,20 +1112,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1336501151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 1973da742d6c9bf41846cecee9ebb1c3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1412940404}
-  m_GameObject: {fileID: 1336501143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  resetAfterDeathTime: 1.5
 --- !u!114 &1336501152
 MonoBehaviour:
   m_ObjectHideFlags: 0

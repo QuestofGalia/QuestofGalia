@@ -158,7 +158,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400004, guid: b1ef34e6365267d45a7032e9142bf7d8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b1ef34e6365267d45a7032e9142bf7d8, type: 2}
   m_RootGameObject: {fileID: 1330762400}
   m_IsPrefabParent: 0
@@ -625,7 +626,8 @@ Prefab:
       propertyPath: m_TagString
       value: Monster
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400004, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
   m_RootGameObject: {fileID: 1840689370}
   m_IsPrefabParent: 0
@@ -1939,8 +1941,6 @@ GameObject:
   - 135: {fileID: 1840689373}
   - 54: {fileID: 1840689372}
   - 114: {fileID: 1840689380}
-  - 114: {fileID: 1840689379}
-  - 114: {fileID: 1840689378}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Monster
@@ -2046,33 +2046,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 462915014}
   m_GameObject: {fileID: 1840689370}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1840689378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1840689370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  resetAfterDeathTime: 1.5
---- !u!114 &1840689379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 1973da742d6c9bf41846cecee9ebb1c3,
-    type: 2}
-  m_PrefabInternal: {fileID: 462915014}
-  m_GameObject: {fileID: 1840689370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  resetAfterDeathTime: 1.5
 --- !u!114 &1840689380
 MonoBehaviour:
   m_ObjectHideFlags: 0
