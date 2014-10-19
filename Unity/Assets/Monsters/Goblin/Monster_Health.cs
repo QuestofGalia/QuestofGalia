@@ -20,6 +20,7 @@ public class Monster_Health : MonoBehaviour {
 
     void Update()
     {
+        AddjustCurrentHealth(0);
 
         if (health <= 0f)
         {
@@ -33,6 +34,15 @@ public class Monster_Health : MonoBehaviour {
             }
 
         }
+    }
+
+    public void AddjustCurrentHealth(int adj)
+    {
+        health += adj;
+
+        if (health < 0)
+            health = 0;
+
     }
 
     void monsterDying()

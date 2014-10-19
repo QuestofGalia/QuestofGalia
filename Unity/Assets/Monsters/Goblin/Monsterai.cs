@@ -7,7 +7,9 @@ public class Monsterai : MonoBehaviour {
     private Transform target = null;
     public int MovSpeed;
     public float minDist;
-   
+    public int attackDamage = -5;
+    public float cooldown = 1.5f;
+    public float attackTime = 0;
 
 
 	void Start () {
@@ -31,13 +33,7 @@ public class Monsterai : MonoBehaviour {
         if (target == null) return;
         
         transform.LookAt(target);
-        /*if(Vector3.Distance(transform.position,target.position) >= MinDist){
-            transform.position += transform.forward*MovSpeed*Time.deltaTime;
- 
-            if(Vector3.Distance(transform.position,target.position) <= MaxDist)
-            {
-                //Hyökkäykset ja muut tänne
-            }*/
+            
         float distance = Vector3.Distance(transform.position, target.position);
         Debug.Log("Välimatka saatu");
         bool tooClose = distance < minDist;
@@ -45,6 +41,21 @@ public class Monsterai : MonoBehaviour {
         Debug.Log("Kohta lähtee");
         transform.Translate(direction * MovSpeed * Time.deltaTime);
         Debug.Log("Liikutaan");
- 
+        
+        if(attackTime > 0)
+            attackTime -= Time.deltaTime;
+
+        if (attackTime < 0)
+            attackTime = 0;
+
+        if (attackTime == 0)
+        {
+            if (Vector3.Distance(transform.position, target.position) <= minDist)
+            {
+                Player_Health eh = (Player_Health)target.GetComponent("Player_Health");
+                eh.AddjustCurrentHealth(attackDamage);
+            }
+            attackTime = cooldown;
+        } 
 }
 }

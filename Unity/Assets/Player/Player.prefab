@@ -34,6 +34,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
+  - 135: {fileID: 13500000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -196,8 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4926ce574c43f5544a978e303c714de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  currentHealth: 50
+  maxHealth: 50
   resetAfterDeathTime: 5
+  healthBarLength: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -205,6 +208,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
+--- !u!135 &13500000
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -158,6 +158,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b1ef34e6365267d45a7032e9142bf7d8, type: 2}
+      propertyPath: attackDamage
+      value: -13
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: b1ef34e6365267d45a7032e9142bf7d8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b1ef34e6365267d45a7032e9142bf7d8, type: 2}
@@ -378,6 +382,9 @@ MonoBehaviour:
   Player: {fileID: 0}
   MovSpeed: 3
   minDist: 1.29999995
+  attackDamage: -5
+  cooldown: 1.5
+  attackTime: 0
 --- !u!23 &247300490
 Renderer:
   m_ObjectHideFlags: 0
@@ -625,6 +632,10 @@ Prefab:
     - target: {fileID: 100000, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
       propertyPath: m_TagString
       value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
+      propertyPath: health
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: 1973da742d6c9bf41846cecee9ebb1c3, type: 2}
@@ -1424,6 +1435,7 @@ GameObject:
   - 114: {fileID: 1330762403}
   - 54: {fileID: 1330762402}
   - 114: {fileID: 1330762408}
+  - 135: {fileID: 1330762409}
   - 114: {fileID: 1330762407}
   m_Layer: 0
   m_Name: Player
@@ -1527,8 +1539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4926ce574c43f5544a978e303c714de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  currentHealth: 50
+  maxHealth: 50
   resetAfterDeathTime: 5
+  healthBarLength: 0
 --- !u!114 &1330762408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,6 +1555,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2d9df07bb35fb46b487441ba49a5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1.5
+  cooldown: .5
+  attackDamage: -13
+--- !u!135 &1330762409
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: b1ef34e6365267d45a7032e9142bf7d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 56076296}
+  m_GameObject: {fileID: 1330762400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1369809706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2033,9 @@ MonoBehaviour:
   Player: {fileID: 0}
   MovSpeed: 3
   minDist: 1.29999995
+  attackDamage: -5
+  cooldown: 1.5
+  attackTime: 0
 --- !u!23 &1840689375
 Renderer:
   m_ObjectHideFlags: 0
@@ -2058,7 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3db97f29baa734c96ed5dee32d5df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 35
   resetAfterDeathTime: 1.5
 --- !u!1001 &1864448775
 Prefab:
