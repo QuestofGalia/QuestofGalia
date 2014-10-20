@@ -10,6 +10,7 @@ public class Monsterai : MonoBehaviour {
     public int attackDamage = -5;
     public float cooldown = 1.5f;
     public float attackTime = 0;
+    public float range = 1.3f;
 
 
 	void Start () {
@@ -42,7 +43,7 @@ public class Monsterai : MonoBehaviour {
         transform.Translate(direction * MovSpeed * Time.deltaTime);
         Debug.Log("Liikutaan");
         
-        if(attackTime > 0)
+      if(attackTime > 0)
             attackTime -= Time.deltaTime;
 
         if (attackTime < 0)
@@ -50,12 +51,12 @@ public class Monsterai : MonoBehaviour {
 
         if (attackTime == 0)
         {
-            if (Vector3.Distance(transform.position, target.position) <= minDist)
+            if (Vector3.Distance(transform.position, target.position) <= range)
             {
                 Player_Health eh = (Player_Health)target.GetComponent("Player_Health");
                 eh.AddjustCurrentHealth(attackDamage);
             }
             attackTime = cooldown;
-        } 
+        }
 }
 }

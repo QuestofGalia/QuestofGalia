@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74582bd02f5e7d644afd311d5b4cf43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 100002, guid: b1ef34e6365267d45a7032e9142bf7d8, type: 2}
   MovSpeed: 3
   minDist: 1.29999995
+  attackDamage: -5
+  cooldown: 1
+  attackTime: 0
+  range: 1.29999995
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
