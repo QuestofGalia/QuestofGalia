@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Doors\NewBehaviourScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Doors\Avoimenovenaukeaminen.cs">
     <Files>
-      <File FileName="Assets\Doors\NewBehaviourScript.cs" Line="16" Column="1" />
+      <File FileName="Assets\Doors\Avoimenovenaukeaminen.cs" Line="4" Column="21" />
       <File FileName="Assets\Player\Player_Health.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
