@@ -46,7 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Doors\closedovi.cs" />
      <Compile Include="Assets\Doors\openovi.cs" />
+     <Compile Include="Assets\Key\key.cs" />
      <Compile Include="Assets\Level changer\level_change.cs" />
      <Compile Include="Assets\Monsters\Goblin\Monster_Health.cs" />
      <Compile Include="Assets\Monsters\Goblin\Monsterai.cs" />

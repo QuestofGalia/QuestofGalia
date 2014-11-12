@@ -6,9 +6,10 @@ public class Player : MonoBehaviour {
 
     public float speed;
     private Vector3 movement;
+    public bool gotKey = false;
 
 	void Start () {
-	
+	    
 	}
 	
 	void Update () {
@@ -36,4 +37,9 @@ public class Player : MonoBehaviour {
 
         transform.Translate(movement * Time.deltaTime);
 	}
+
+    private void hasKey()
+    {
+        gotKey = true;
+    }
 }
