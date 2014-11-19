@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: WoodPlanksDirty0119_1_S
+  m_Name: FloorHerringbone0059_1_S 24
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,8 +17,8 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 8ad9750a07311e443ba54de30cb98f6f, type: 3}
-          m_Scale: {x: 15, y: 1}
+          m_Texture: {fileID: 2800000, guid: c1bda7ce185782149805678dc84f7c6e, type: 3}
+          m_Scale: {x: 5, y: 5}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
     m_Colors:
