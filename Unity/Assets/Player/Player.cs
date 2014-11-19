@@ -6,16 +6,18 @@ public class Player : MonoBehaviour {
 
     public float speed;
     private Vector3 movement;
-    public bool gotKey = false;
+    public bool key = false;
 
 	void Start () {
 	    
 	}
-	
-	void Update () {
+
+    void Update()
+    {
         movement = Vector3.zero;
 
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
             movement.z += speed;
         }
 
@@ -36,10 +38,28 @@ public class Player : MonoBehaviour {
         }
 
         transform.Translate(movement * Time.deltaTime);
-	}
 
-    private void hasKey()
-    {
-        gotKey = true;
     }
+
+    public void hasKey(bool t)
+    {
+        key = t;
+        Debug.Log("Avain on tosi");
+    }
+
+    public int getKey()
+    {
+        int a = 1;
+        int b = 0;
+
+        if (key == true)
+            return a;
+        else
+            return b;
+    }
+
+
+
+
+    
 }

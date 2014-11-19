@@ -3,14 +3,19 @@ using System.Collections;
 
 public class closedovi : MonoBehaviour {
 
-    public Player player;
+    private Transform target = null;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && player.gotKey == true)
+        if (other.tag == "Player")
         {
-            Destroy(gameObject);
+            target = other.transform;
+            Player player = (Player)target.GetComponent("Player");
+
+            if(player.getKey() == 1)
+                Destroy(gameObject);
         }
+
     }
     
 }
