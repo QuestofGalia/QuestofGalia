@@ -1,0 +1,16 @@
+Release Notes for Quest of Ga-Lia version 0.31
+
+
+------------------------------------------
+Current build:
+- Levels 1, 2, 3, 4, 5 now playable.
+- Level 5 boss now killable.
+- Players can now view a greater distance from the game world when playing.
+- Fixed the issue of player falling through the floor at the end of Level 5
+- Fixed issue with stretched textures on Levels 2, 3, 4, 5
+
+
+- Added floor and wall tiles to Level 6.
+- Added textures to Level 6.
+
+------------------------------------------
